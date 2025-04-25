@@ -1,0 +1,22 @@
+{
+  "name": "jwt_login",
+  "version": "1.0.0",
+  "description": "JWT Login",
+  "main": "app.js",
+  "scripts": {
+    "dev": "ENV=dev nodemon app.js",
+    "local": "ENV=local nodemon app.js",
+    "build": "next build",
+    "start": "npm run build && node ./app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-jsonschema": "^1.1.6",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.10"
+  }
+}

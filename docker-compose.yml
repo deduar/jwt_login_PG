@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jwt_login
+    image: jwt_login:0.0.1
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    tty: true
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - AUTH_SECRET=secret
+    networks:
+      - jwt_login_network
+
+networks:
+  jwt_login_network:
+    driver: bridge
+
